@@ -8,7 +8,7 @@ const SocketProvider = ({ children }) => {
   const socketRef = useRef(null);
 
   useEffect(() => {
-    const socket = io("https://ubergo-backend.onrender.com");
+    const socket = io("http://localhost:8080");
     socketRef.current = socket;
 
     socket.on("connect", () => {
